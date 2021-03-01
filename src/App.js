@@ -1,13 +1,33 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
+import Detail from './pages/Detail';
+import PageNotFound from "./pages/PageNotFound";
+
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={Home}/>
+
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/detail">Detalle</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch >
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/detail" component={Detail}/>
+          <Redirect from="/redirect" to="/" />
+          <Route component={PageNotFound} />
+        </Switch>
       </div>
     </Router>
   );
