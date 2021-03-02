@@ -8,11 +8,17 @@ import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles({
     cardPrice: {
-      minWidth: 275,
+      maxWidth: 300,
     },
     title: {
-      fontSize: 14,
+      fontSize: 12,
+      color: '#333333'
     },
+    numberPrice: {
+        fontSize: 34,
+        color: '#bb64c8',
+        fontWeight: 'bold'
+    }
   });
 
 const PriceCard = () => {
@@ -25,7 +31,7 @@ const PriceCard = () => {
             <Typography className={classes.title} color="textSecondary" gutterBottom>
                 SALDO DISPONIBLE
             </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" className={classes.numberPrice}>
                 $1,449,970.00
             </Typography>
             </CardContent>
