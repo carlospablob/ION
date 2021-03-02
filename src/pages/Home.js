@@ -1,10 +1,12 @@
 import React from 'react'
 import FooterNavigation from '../components/FooterNavigation';
 import { makeStyles } from '@material-ui/core/styles';
+import PriceCard from '../components/PriceCard';
+import HeaderBar from '../components/HeaderBar';
 
 const useStyles  = makeStyles({
   root: {
-    
+
   },
   footer: {
     background: 'blue',
@@ -18,10 +20,10 @@ const Home = () => {
 
   return (
     <div className={classes.root}>
-      <h3>Hello Home</h3>
 
-
-
+      <HeaderBar />
+      
+      <PriceCard />
 
 
       <FooterNavigation  className={classes.footer}/>
