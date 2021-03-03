@@ -8,16 +8,17 @@ import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles({
     cardPrice: {
-      maxWidth: 300,
+      width: '80%',
     },
     title: {
       fontSize: 12,
-      color: '#333333'
+      color: '#333333',
+      textAlign: 'left'
     },
     numberPrice: {
         fontSize: 34,
         color: '#bb64c8',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     }
   });
 
